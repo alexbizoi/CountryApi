@@ -1,0 +1,73 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <script src="~/lib/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#refresh').on('click', function () {
+                $.ajax({
+                    url: 'api/country',
+                    type: 'POST',
+                    async: false,
+                    dataType: "json",
+                    data: {},
+                    contentType: 'application/json; charset=utf-8',
+                }).done(function (data) {
+                    $('#result').empty();
+                    if (data != undefined) {
+                        $('#result').html("List of new countries added:" + "</br");
+                        var listView = document.createElement('ul');
+                        
+                        $.each(data, function (i, country) {
+                            var listViewItem = document.createElement('li');
+                            listViewItem.appendChild(document.createTextNode(country.code + '-' + country.name));
+                            listView.appendChild(listViewItem);
+                            //$('#result').html($('#result').html() + country.code + '-' + country.name + '<br />');
+                        });
+                        $('#result').append(listView);
+                    }
+                    else {
+                        $('#result').html("No update needed");
+                    }
+                }).error(function (data) {
+                    $('#result').empty();
+                    $('#result').html(data.responseText);
+                });
+            });
+            $('#getCountry').on('click', function () {
+                $.ajax({
+                    url: 'api/country/' + $('#countryCode').val(),
+                    type: 'GET',
+                    async: true,
+                    contentType: 'application/json; charset=utf-8'
+                }).done(function (data) {
+                    $('#result').empty();
+                    $('#result').html(data.code + '-' + data.name + '</br>');
+                }).error(function (data) {
+                    $('#result').empty();
+                    $('#result').html(data.responseText);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button id="refresh">Refresh country list</button>
+    </div>
+    <div>
+        <button id="getCountry">Get country</button>
+        <label>Country Code</label>
+        <input id="countryCode" />
+    </div>
+    <div id="result"></div>
+</body>
+</html>

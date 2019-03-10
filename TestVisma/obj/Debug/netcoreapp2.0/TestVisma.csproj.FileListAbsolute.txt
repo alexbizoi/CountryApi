@@ -1,0 +1,11 @@
+D:\Work\TestVisma\TestVisma\TestVisma\bin\Debug\netcoreapp2.0\TestVisma.deps.json
+D:\Work\TestVisma\TestVisma\TestVisma\bin\Debug\netcoreapp2.0\TestVisma.runtimeconfig.json
+D:\Work\TestVisma\TestVisma\TestVisma\bin\Debug\netcoreapp2.0\TestVisma.runtimeconfig.dev.json
+D:\Work\TestVisma\TestVisma\TestVisma\bin\Debug\netcoreapp2.0\TestVisma.dll
+D:\Work\TestVisma\TestVisma\TestVisma\bin\Debug\netcoreapp2.0\TestVisma.pdb
+D:\Work\TestVisma\TestVisma\TestVisma\obj\Debug\netcoreapp2.0\TestVisma.csprojResolveAssemblyReference.cache
+D:\Work\TestVisma\TestVisma\TestVisma\obj\Debug\netcoreapp2.0\TestVisma.csproj.CoreCompileInputs.cache
+D:\Work\TestVisma\TestVisma\TestVisma\obj\Debug\netcoreapp2.0\TestVisma.AssemblyInfoInputs.cache
+D:\Work\TestVisma\TestVisma\TestVisma\obj\Debug\netcoreapp2.0\TestVisma.AssemblyInfo.cs
+D:\Work\TestVisma\TestVisma\TestVisma\obj\Debug\netcoreapp2.0\TestVisma.dll
+D:\Work\TestVisma\TestVisma\TestVisma\obj\Debug\netcoreapp2.0\TestVisma.pdb
